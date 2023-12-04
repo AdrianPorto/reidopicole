@@ -49,7 +49,7 @@ const Cadastros: React.FC = () => {
     };
 
     fetchProducts();
-  }, [openCreateProducts, openEditProducts, openDeleteProducts]);
+  }, [openCreateProducts, openEditProducts, openDeleteProducts, products]);
   return (
     <div className={`${inter.className} flex`}>
       <NavBar></NavBar>
@@ -88,7 +88,7 @@ const Cadastros: React.FC = () => {
             </div>
             <div className="overflow-auto scroll">
               {products.map((product: any, index: any) => (
-                <div className="flex h-[50px]   ">
+                <div className="flex h-[50px]   " key={index}>
                   <div className="w-[7%]  pl-[5px] border-b flex items-center justify-center">
                     {product.id}
                   </div>

@@ -41,7 +41,7 @@ const CreateProducts: React.FC<Props> = ({ setOpenCreateProducts }) => {
         modalElement.removeEventListener("keydown", handleKeyPress);
       }
     };
-  }, []);
+  }, [setOpenCreateProducts]);
 
   useEffect(() => {
     const fetchID = async () => {

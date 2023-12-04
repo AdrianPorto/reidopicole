@@ -51,7 +51,7 @@ const EditProducts: React.FC<Props> = ({
         modalElement.removeEventListener("keydown", handleKeyPress);
       }
     };
-  }, []);
+  }, [setOpenEditProducts]);
 
   const fetchProducts = async () => {
     const data = collection(db, "products");

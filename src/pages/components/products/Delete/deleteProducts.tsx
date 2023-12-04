@@ -49,7 +49,7 @@ const DeleteProducts: React.FC<Props> = ({
         modalElement.removeEventListener("keydown", handleKeyPress);
       }
     };
-  }, []);
+  }, [setOpenDeleteProducts]);
 
   const fetchProducts = async () => {
     const data = collection(db, "products");
